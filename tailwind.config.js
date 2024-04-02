@@ -13,6 +13,9 @@ module.exports = {
         "primary-light": "#70b2e2",
         "secondary-light": "#d9d9d9",
       },
+      fontFamily: {
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
+      },
     },
   },
   plugins: [],
