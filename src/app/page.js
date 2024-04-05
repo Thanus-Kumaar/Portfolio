@@ -1,8 +1,13 @@
 "use client";
 import { useRef, useState } from "react";
-import Button from "./components/button";
+
 import { IoIosDocument } from "react-icons/io";
 import { FaLightbulb } from "react-icons/fa";
+
+import Button from "./components/button";
+import Footer from "./components/footer";
+import "../../public/noScrollbar.css";
+
 export default function Home() {
   const cursor = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -30,8 +35,8 @@ export default function Home() {
       </div> */}
       <div className="h-20 flex flex-row px-6 py-3 justify-between">
         <div>
-          <div className="text-2xl">Thanus Kumaar</div>
-          <div className="pl-1">A curious mind</div>
+          <div className="text-3xl">Thanus Kumaar</div>
+          <div className="pl-1 text-md">A curious mind</div>
         </div>
         <div className="flex flex-row gap-4 pt-2">
           <Button buttonBody={"Home"} onClick={redirectProjects} />
@@ -40,7 +45,7 @@ export default function Home() {
           <Button buttonBody={"About"} onClick={redirectProjects} />
         </div>
       </div>
-      <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark mx-auto align-middle">
+      <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark mx-auto align-middle overflow-scroll noScrollBar">
         <div className="flex flex-row justify-evenly px-[80px] py-[50px] h-full gap-20">
           <div className="h-full flex-1 bg-yellow-50"></div>
           <div className="h-full w-[500px] bg-primary-dark rounded-lg">
@@ -64,7 +69,7 @@ export default function Home() {
                   </div>
                   <div
                     className={
-                      "h-12 w-full bg-secondary-light rounded-r-md text-primary-dark text-2xl text-center pt-[6px]"
+                      "relative h-12 w-full bg-secondary-light rounded-r-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#2a2a2c] before:inset-0 before:bg-[#2a2a2c] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-left before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100"
                     }
                   >
                     Curiculum Vitae
@@ -73,7 +78,7 @@ export default function Home() {
                 <div className="flex flex-row hover:scale-[1.03] transition duration-100">
                   <div
                     className={
-                      "h-12 w-full bg-secondary-light rounded-l-md text-primary-dark text-2xl text-center pt-[6px]"
+                      "relative h-12 w-full bg-secondary-light rounded-r-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#2a2a2c] before:inset-0 before:bg-[#2a2a2c] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100"
                     }
                   >
                     Projects
@@ -86,6 +91,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </main>
   );

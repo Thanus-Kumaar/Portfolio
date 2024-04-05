@@ -8,6 +8,10 @@ body{
   cursor:default;
 }
 
+body::-webkit-scrollbar{
+  width: 0px;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
