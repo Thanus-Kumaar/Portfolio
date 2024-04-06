@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <main
-      className="bg-primary-dark text-secondary-light font-sans h-screen flex flex-col"
+      className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col"
       onMouseMove={handleCursor}
     >
       {/* <div
@@ -30,10 +30,10 @@ export default function Home() {
         <div className="relative w-2 h-2 bg-primary-light rounded-full after:bg-primary-light after:opacity-60 after:w-4 after:h-4 after:content-[''] after:absolute after:rounded-full after:translate-x-[-25%] after:translate-y-[-25%]"></div>
       </div> */}
       <Navbar />
-      <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark mx-auto align-middle overflow-scroll noScrollBar">
+      <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="flex flex-row justify-evenly px-[80px] py-[50px] h-full gap-20">
           <div className="h-full flex-1 bg-yellow-50"></div>
-          <div className="h-full w-[500px] bg-primary-dark rounded-lg">
+          <div className="h-full w-[500px] bg-primary-dark dark:bg-primary-light rounded-lg">
             <div className="flex flex-col p-8 h-full justify-between">
               <div className="flex flex-col gap-8 text-lg">
                 <div>
@@ -49,7 +49,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-row hover:scale-[1.03] transition duration-100">
-                  <div className="h-12 w-12 rounded-l-md bg-secondary-dark">
+                  <div className="h-12 w-12 rounded-l-md bg-secondary-dark dark:bg-secondary-light">
                     <IoIosDocument className="h-8 w-8 mx-auto mt-2" />
                   </div>
                   <div
@@ -68,7 +68,7 @@ export default function Home() {
                   >
                     Projects
                   </div>
-                  <div className="h-12 w-12 rounded-r-md bg-secondary-dark">
+                  <div className="h-12 w-12 rounded-r-md bg-secondary-dark dark:bg-secondary-light">
                     <FaLightbulb className="h-8 w-8 mx-auto mt-2" />
                   </div>
                 </div>

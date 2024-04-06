@@ -32,15 +32,15 @@ export default function Projects() {
   ]);
 
   return (
-    <main className="bg-primary-dark text-secondary-light font-sans h-screen flex flex-col">
+    <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col">
       <Navbar />
-      <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark mx-auto align-middle overflow-scroll noScrollBar">
+      <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="text-[30px] ml-10 mt-4">Projects</div>
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="w-[700px] h-[500px] rounded-xl p-3 bg-primary-dark"
+              className="w-[700px] h-[500px] rounded-xl p-3 bg-primary-dark dark:bg-primary-light"
             >
               <Image
                 className="rounded-lg bg-white"
