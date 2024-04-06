@@ -13,9 +13,18 @@ export default function NavBar() {
         <div className="pl-1 text-md">A curious mind</div>
       </div>
       <div className="flex flex-row gap-4 pt-2">
-        <Button buttonBody={"Home"} onClick={redirectProjects} />
-        <Button buttonBody={"Projects"} onClick={redirectProjects} />
-        <Button buttonBody={"Skills"} onClick={redirectProjects} />
+        <Button
+          buttonBody={"Home"}
+          onClick={() => (window.location.href = "/")}
+        />
+        <Button
+          buttonBody={"Projects"}
+          onClick={() => (window.location.href = "/projects")}
+        />
+        <Button
+          buttonBody={"Skills"}
+          onClick={() => (window.location.href = "/certificates")}
+        />
         <Button buttonBody={"About"} onClick={redirectProjects} />
       </div>
     </div>

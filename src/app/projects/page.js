@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import "../../../public/noScrollBar.css";
 import { FaSquareArrowUpRight } from "react-icons/fa6";
 
@@ -35,7 +36,7 @@ export default function Projects() {
       <Navbar />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark mx-auto align-middle overflow-scroll noScrollBar">
         <div className="text-[30px] ml-10 mt-4">Projects</div>
-        <div className="mx-8 my-3 flex flex-wrap flex-row justify-between gap-y-8">
+        <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -56,6 +57,7 @@ export default function Projects() {
             </div>
           ))}
         </div>
+        <Footer />
       </div>
     </main>
   );
