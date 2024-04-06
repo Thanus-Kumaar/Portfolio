@@ -14,15 +14,19 @@ export default function footer() {
       <div className="flex flex-col gap-8">
         <div className="text-3xl flex justify-end">ABOUT</div>
         <div className="flex flex-row gap-4 justify-end">
-          <div className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1]">
-            <FaGithub className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
-          </div>
-          <div className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1]">
+          <a
+            href="https://github.com/Thanus-Kumaar"
+            target="_blank"
+            className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1]"
+          >
+              <FaGithub className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
+          </a>
+          <a href="https://www.linkedin.com/in/thanus-kumaar/" target="_blank" className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1]">
             <FaLinkedinIn className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
-          </div>
-          <div className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1]">
+          </a>
+          <a href="https://www.instagram.com/thanus_kumaar/" target="_blank" className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1]">
             <RiInstagramFill className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
-          </div>
+          </a>
         </div>
         <div className="text-secondary-light dark:text-primary-dark text-5xl mt-7">
           A curious mind
