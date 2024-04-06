@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { IoIosDocument } from "react-icons/io";
 import { FaLightbulb } from "react-icons/fa";
 
-import Button from "./components/button";
+import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import "../../public/noScrollbar.css";
 
@@ -18,10 +18,6 @@ export default function Home() {
     setPosition({ x: pageX, y: pageY });
   };
 
-  const redirectProjects = () => {
-    console.log("Projects clicked");
-  };
-
   return (
     <main
       className="bg-primary-dark text-secondary-light font-sans h-screen flex flex-col"
@@ -33,18 +29,7 @@ export default function Home() {
       >
         <div className="relative w-2 h-2 bg-primary-light rounded-full after:bg-primary-light after:opacity-60 after:w-4 after:h-4 after:content-[''] after:absolute after:rounded-full after:translate-x-[-25%] after:translate-y-[-25%]"></div>
       </div> */}
-      <div className="h-20 flex flex-row px-6 py-3 justify-between">
-        <div>
-          <div className="text-3xl">Thanus Kumaar</div>
-          <div className="pl-1 text-md">A curious mind</div>
-        </div>
-        <div className="flex flex-row gap-4 pt-2">
-          <Button buttonBody={"Home"} onClick={redirectProjects} />
-          <Button buttonBody={"Projects"} onClick={redirectProjects} />
-          <Button buttonBody={"Skills"} onClick={redirectProjects} />
-          <Button buttonBody={"About"} onClick={redirectProjects} />
-        </div>
-      </div>
+      <Navbar />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark mx-auto align-middle overflow-scroll noScrollBar">
         <div className="flex flex-row justify-evenly px-[80px] py-[50px] h-full gap-20">
           <div className="h-full flex-1 bg-yellow-50"></div>
@@ -64,7 +49,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-row hover:scale-[1.03] transition duration-100">
-                  <div className="h-12 w-12 rounded-md bg-secondary-dark">
+                  <div className="h-12 w-12 rounded-l-md bg-secondary-dark">
                     <IoIosDocument className="h-8 w-8 mx-auto mt-2" />
                   </div>
                   <div
@@ -78,12 +63,12 @@ export default function Home() {
                 <div className="flex flex-row hover:scale-[1.03] transition duration-100">
                   <div
                     className={
-                      "relative h-12 w-full bg-secondary-light rounded-r-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#2a2a2c] before:inset-0 before:bg-[#2a2a2c] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100"
+                      "relative h-12 w-full bg-secondary-light rounded-l-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#2a2a2c] before:inset-0 before:bg-[#2a2a2c] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100"
                     }
                   >
                     Projects
                   </div>
-                  <div className="h-12 w-12 rounded-md bg-secondary-dark">
+                  <div className="h-12 w-12 rounded-r-md bg-secondary-dark">
                     <FaLightbulb className="h-8 w-8 mx-auto mt-2" />
                   </div>
                 </div>
