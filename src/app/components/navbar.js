@@ -47,7 +47,7 @@ export default function NavBar() {
       </div>
       <div className="flex flex-row gap-4 pt-2">
         <div className="pt-2 flex flex-row gap-3">
-          <CiDark className="w-7 h-7" />
+          <CiDark className="w-7 h-7 transition duration-200 hover:scale-[1.15]" />
           <div className="mt-1">
             <Switch
               value={theme}
@@ -55,7 +55,7 @@ export default function NavBar() {
               onChange={toggleTheme}
             />
           </div>
-          <CiLight className="w-8 h-8" />
+          <CiLight className="w-8 h-8 transition duration-200 hover:scale-[1.15]" />
         </div>
         <Button
           buttonBody={"Home"}

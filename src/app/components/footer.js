@@ -6,7 +6,7 @@ export default function footer() {
   return (
     <div className="w-full h-2/5 bg-primary-dark dark:bg-primary-light flex flex-row p-5">
       <div className="m-10 flex-1">
-        <div className="w-[500px] bg-secondary-dark dark:bg-secondary-light align-bottom rounded-lg h-full ml-36 text-xl flex flex-col justify-evenly px-5">
+        <div className="relative z-[10] w-[500px] bg-secondary-dark dark:bg-secondary-light align-bottom rounded-lg h-full ml-36 text-xl flex flex-col justify-evenly px-5 before:absolute before:content-[''] before:inset-0 before:z-[9] before:border-2 before:border-secondary-light dark:before:border-primary-dark before:translate-x-[10px] before:translate-y-[10px] before:rounded-lg before:transition before:duration-200 hover:before:translate-x-0 hover:before:translate-y-0 active:before:translate-x-[-5px] active:before:translate-y-[-5px]">
           <div className="ml-4">EMAIL : thanuskumaara@gmail.com</div>
           <div className="ml-4">PHONE : 8778637550</div>
         </div>
