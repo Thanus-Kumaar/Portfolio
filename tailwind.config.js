@@ -12,7 +12,7 @@ module.exports = withMT({
       colors: {
         "primary-dark": "#101017",
         "secondary-dark": "#191929",
-        "primary-light": "#70b2e2",
+        "primary-light": "#419FE3",
         "secondary-light": "#d9d9d9",
       },
       fontFamily: {
