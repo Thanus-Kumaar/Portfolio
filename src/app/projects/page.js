@@ -68,7 +68,7 @@ export default function Projects() {
               <div className="flex flex-row justify-between">
                 <div className="text-2xl mt-3">{project.Title}</div>
                 <div className="flex flex-row mt-3 gap-3">{project.Tags.map((tag,index)=>(
-                  <div key={index} className="rounded-md h-fit text-sm px-2 pb-1 text-center bg-secondary-light text-primary-dark dark:bg-primary-dark dark:text-secondary-light transition duration-200 hover:scale-[1.1]">{tag}</div>
+                  <div key={index} className="rounded-md h-fit text-sm px-2 pb-1 text-center bg-secondary-light text-primary-dark dark:bg-primary-dark dark:text-secondary-light">{tag}</div>
                 ))}</div>
               </div>
               <div className="flex flex-row">

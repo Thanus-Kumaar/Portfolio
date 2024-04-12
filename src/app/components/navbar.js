@@ -67,7 +67,7 @@ export default function NavBar() {
         />
         <Button
           buttonBody={"Skills"}
-          onClick={() => (window.location.href = "/certificates")}
+          onClick={() => (window.location.href = "/skills")}
         />
         <Button buttonBody={"About"} onClick={redirectProjects} />
       </div>
