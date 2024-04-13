@@ -7,6 +7,7 @@ import { FaLightbulb } from "react-icons/fa";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import Cursor from './components/cursor';
 import "../../public/noScrollbar.css";
 
 export default function Home() {
@@ -22,8 +23,8 @@ export default function Home() {
   return (
     <main
       className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col"
-      onMouseMove={handleCursor}
     >
+      <Cursor />
       {/* <div
         className="absolute"
         ref={cursor}

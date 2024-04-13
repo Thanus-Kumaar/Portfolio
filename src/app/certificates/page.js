@@ -1,5 +1,6 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import Cursor from '../components/cursor';
 import "../../../public/noScrollbar.css";
 
 export default function Certifications() {
@@ -23,6 +24,7 @@ export default function Certifications() {
   return (
     <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col">
       <Navbar />
+      <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="w-full overflow-scroll noScrollBar">
           <div className="w-full text-center">

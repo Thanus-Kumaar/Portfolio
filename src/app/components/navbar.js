@@ -43,7 +43,7 @@ export default function NavBar() {
     <div className="h-20 flex flex-row px-6 py-3 justify-between">
       <div>
         <div className="text-3xl">Thanus Kumaar</div>
-        <div className="pl-1 text-md">A curious mind</div>
+        <div className="pl-1 mb-2 text-md">A curious mind</div>
       </div>
       <div className="flex flex-row gap-4 pt-2">
         <div className="pt-2 flex flex-row gap-3">

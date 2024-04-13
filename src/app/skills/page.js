@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import "../../../public/noScrollbar.css";
 import Footer from "../components/footer";
+import Cursor from '../components/cursor';
 
 import { Carousel } from "@material-tailwind/react";
 import { IconButton } from "@material-tailwind/react";
@@ -190,6 +191,7 @@ export default function Skills() {
   return (
     <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col">
       <Navbar />
+      <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <Carousel
           className="rounded-xl overflow-hidden"
@@ -198,7 +200,7 @@ export default function Skills() {
               variant="text"
               size="lg"
               onClick={handlePrev}
-              className="!absolute top-2/4 left-4 -translate-y-2/4 text-white dark:text-primary-dark"
+              className="!absolute top-2/4 left-4 -translate-y-2/4 text-white dark:text-primary-dark cursor-buttons"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +223,7 @@ export default function Skills() {
               variant="text"
               size="lg"
               onClick={handleNext}
-              className="!absolute top-2/4 !right-4 -translate-y-2/4 text-white dark:text-primary-dark"
+              className="!absolute top-2/4 !right-4 -translate-y-2/4 text-white dark:text-primary-dark cursor-buttons"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +242,7 @@ export default function Skills() {
             </IconButton>
           )}
           navigation={({ setActiveIndex, activeIndex, length }) => (
-            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2 cursor-buttons">
               {new Array(length).fill("").map((_, i) => (
                 <span
                   key={i}
