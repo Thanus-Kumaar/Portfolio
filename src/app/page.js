@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
+import Image from "next/image";
 
 import { IoIosDocument } from "react-icons/io";
 import { FaLightbulb } from "react-icons/fa";
@@ -32,7 +33,11 @@ export default function Home() {
       <Navbar />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="flex flex-row justify-evenly px-[80px] py-[50px] h-full gap-20">
-          <div className="h-full flex-1 bg-yellow-50"></div>
+          <div className="h-full flex-1">
+            <div className="p-10 rounded-lg bg-primary-dark mx-auto mt-14 dark:bg-primary-light w-fit">
+              <Image height={400} width={400} src='/home.svg' />
+            </div>
+          </div>
           <div className="h-full w-[500px] bg-primary-dark dark:bg-primary-light rounded-lg">
             <div className="flex flex-col p-8 h-full justify-between">
               <div className="flex flex-col gap-8 text-lg">

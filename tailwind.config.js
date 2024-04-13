@@ -10,10 +10,10 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        "primary-dark": "#101017",
-        "secondary-dark": "#191929",
-        "primary-light": "#419FE3",
-        "secondary-light": "#d9d9d9",
+        "primary-dark": "#0A150E",
+        "secondary-dark": "#1B3725",
+        "primary-light": "#B7D1B3",
+        "secondary-light": "#DCE8D9",
       },
       fontFamily: {
         sans: ["Poppins", "ui-sans-serif", "system-ui"],

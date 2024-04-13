@@ -1,7 +1,8 @@
 "use client";
-
+import Image from "next/image";
 import Navbar from "../components/navbar";
 import "../../../public/noScrollbar.css";
+import Footer from "../components/footer";
 
 import { Carousel } from "@material-tailwind/react";
 import { IconButton } from "@material-tailwind/react";
@@ -43,145 +44,145 @@ export default function Skills() {
     {
       Title: "Web development",
       Desc: "Experienced web developer proficient in front-end and back-end technologies, delivering high-quality, responsive websites and web applications.",
-      imgURL: "",
+      imgURL: "/web_dev.svg",
       Icons: [
         {
           icon: <FaHtml5 className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <FaCss3Alt className="skill-icon" />,
-          "iconDesc": "CSS 3",
+          iconDesc: "CSS 3",
         },
         {
           icon: <IoLogoJavascript className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <FaVuejs className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <FaReact className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiNextdotjs className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiExpress className="skill-icon" />,
-          "iconDesc": "Express JS",
+          iconDesc: "Express JS",
         },
         {
           icon: <IoLogoNodejs className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiFlask className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiMysql className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <BiLogoPostgresql className="skill-icon" />,
-          "iconDesc": "Postgres SQL",
+          iconDesc: "Postgres SQL",
         },
         {
           icon: <SiSqlite className="skill-icon" />,
-          "iconDesc": "Sqlite3",
+          iconDesc: "Sqlite3",
         },
         {
           icon: <SiTailwindcss className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <FaBootstrap className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
       ],
     },
     {
       Title: "Development tools",
       Desc: "Utilizing development tools to streamline coding, debug efficiently, and enhance project workflow for smoother software development processes.",
-      imgURL: "",
+      imgURL: "/tools.svg",
       Icons: [
         {
           icon: <FaGitAlt className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <FaGithub className="skill-icon" />,
-          "iconDesc": "CSS 3",
+          iconDesc: "CSS 3",
         },
         {
           icon: <FaFigma className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiPostman className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiVisualstudiocode className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiVisualstudio className="skill-icon" />,
-          "iconDesc": "HTML 5",
+          iconDesc: "HTML 5",
         },
         {
           icon: <SiEclipseide className="skill-icon" />,
-          "iconDesc": "Eclipse",
+          iconDesc: "Eclipse",
         },
         {
           icon: <SiBlender className="skill-icon" />,
-          "iconDesc": "Blender",
+          iconDesc: "Blender",
         },
       ],
     },
     {
       Title: "Programming languages",
       Desc: "Exploring, coding, and problem-solving across various programming languages to develop efficient and innovative solutions.",
-      imgURL: "",
+      imgURL: "/prog.svg",
       Icons: [
         {
           icon: <FaPython className="skill-icon" />,
-          "iconDesc": "Python",
+          iconDesc: "Python",
         },
         {
           icon: <TbBrandCpp className="skill-icon" />,
-          "iconDesc": "C++",
+          iconDesc: "C++",
         },
         {
           icon: <TbLetterC className="skill-icon" />,
-          "iconDesc": "C language",
+          iconDesc: "C language",
         },
         {
           icon: <FaJava className="skill-icon" />,
-          "iconDesc": "Java",
+          iconDesc: "Java",
         },
         {
           icon: <RiJavascriptFill className="skill-icon" />,
-          "iconDesc": "Javascript",
+          iconDesc: "Javascript",
         },
         {
           icon: <BiLogoTypescript className="skill-icon" />,
-          "iconDesc": "Typescript",
+          iconDesc: "Typescript",
         },
         {
           icon: <SiGnubash className="skill-icon" />,
-          "iconDesc": "Bash scripting",
+          iconDesc: "Bash scripting",
         },
         {
           icon: <FaDatabase className="skill-icon" />,
-          "iconDesc": "Structured Query Language",
+          iconDesc: "Structured Query Language",
         },
         {
           icon: <BsRegex className="skill-icon" />,
-          "iconDesc": "regular expression",
+          iconDesc: "regular expression",
         },
       ],
     },
@@ -257,9 +258,12 @@ export default function Skills() {
           {skillSet.map((skill, index) => (
             <div key={index} className="flex h-full flex-row text-center p-4">
               <div className="flex-1 flex h-full flex-col gap-10 pt-28 px-28">
-                <div className="h-36 w-36 mx-auto">
-                  {skill.imgURL}
-                </div>
+                <Image
+                  src={skill.imgURL}
+                  height={300}
+                  width={300}
+                  className="mx-auto"
+                />
                 <div className="flex flex-col gap-8">
                   <div className="text-5xl">{skill.Title}</div>
                   <div className="text-xl">{skill.Desc}</div>
@@ -269,7 +273,7 @@ export default function Skills() {
                 {skill.Icons.map((i, index) => (
                   <div
                     key={index}
-                    className="h-20 w-20 dark:bg-gray-400 bg-primary-dark rounded-xl transition duration-200 hover:scale-[1.05]"
+                    className="h-20 w-20 dark:bg-primary-light bg-primary-dark rounded-xl transition duration-200 hover:scale-[1.05]"
                   >
                     {i.icon}
                   </div>
@@ -278,6 +282,7 @@ export default function Skills() {
             </div>
           ))}
         </Carousel>
+        <Footer />
       </div>
     </main>
   );
