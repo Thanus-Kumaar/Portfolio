@@ -17,6 +17,7 @@ module.exports = withMT({
       },
       fontFamily: {
         sans: ["Poppins", "ui-sans-serif", "system-ui"],
+        LouisG: ["Louis",]
       },
     },
   },

@@ -48,11 +48,11 @@ export default function Projects() {
   ]);
 
   return (
-    <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col">
+    <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-LouisG h-screen flex flex-col">
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-        <div className="text-[30px] ml-10 mt-4 mx-auto text-center">
+        <div className="text-[30px] ml-10 mt-4 mx-auto font-bold text-center">
           PROJECTS
         </div>
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
@@ -76,7 +76,7 @@ export default function Projects() {
                   {project.Tags.map((tag, index) => (
                     <div
                       key={index}
-                      className="rounded-md h-fit text-sm px-2 pb-1 text-center bg-secondary-light text-primary-dark dark:bg-primary-dark dark:text-secondary-light"
+                      className="rounded-md h-fit text-sm px-2 text-center bg-secondary-light text-primary-dark dark:bg-primary-dark dark:text-secondary-light"
                     >
                       {tag}
                     </div>

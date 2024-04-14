@@ -189,7 +189,7 @@ export default function Skills() {
     },
   ];
   return (
-    <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-sans h-screen flex flex-col">
+    <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-LouisG h-screen flex flex-col">
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
@@ -259,15 +259,9 @@ export default function Skills() {
         >
           {skillSet.map((skill, index) => (
             <div key={index} className="flex h-full flex-row text-center p-4">
-              <div className="flex-1 flex h-full flex-col gap-10 pt-28 px-28">
-                <Image
-                  src={skill.imgURL}
-                  height={300}
-                  width={300}
-                  className="mx-auto"
-                />
-                <div className="flex flex-col gap-8">
-                  <div className="text-5xl">{skill.Title}</div>
+              <div className="flex-1 flex h-full flex-col justify-center gap-10 px-28">
+                <div className="flex flex-col gap-12">
+                  <div className="text-6xl font-semibold">{skill.Title}</div>
                   <div className="text-xl">{skill.Desc}</div>
                 </div>
               </div>
