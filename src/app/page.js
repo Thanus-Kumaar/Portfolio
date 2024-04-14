@@ -33,34 +33,31 @@ export default function Home() {
       </div> */}
       <Navbar />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-        <div className="flex flex-row justify-evenly px-[80px] py-[50px] h-full gap-20">
-          <div className="h-full flex-1">
-            <div className="p-10 rounded-lg bg-primary-dark mx-auto mt-14 dark:bg-primary-light w-fit">
-              <Image height={400} width={400} src='/home.svg' />
-            </div>
+        <div className="flex flex-row justify-center px-[80px] py-[50px] h-full">
+          <div className="h-full w-fit">
+            <Image src={'/Profile2.jpeg'} className="rounded-l-lg float-end" height={480} width={480} />
           </div>
-          <div className="h-full w-[500px] bg-primary-dark dark:bg-primary-light rounded-lg">
-            <div className="flex flex-col p-8 h-full justify-between">
-              <div className="flex flex-col gap-8 text-lg">
+          <div className="h-full w-[800px] bg-primary-dark dark:bg-primary-light rounded-r-lg">
+            <div className="flex flex-col px-14 py-8 h-full justify-between">
+              <div className="flex flex-col gap-8 text-2xl">
                 <div>
                   I am,
                   <br />
-                  <span className="text-3xl">Thanus Kumaar A</span>
+                  <span className="text-6xl underline underline-offset-8 decoration-2">Thanus Kumaar</span>
                 </div>
-                <div>
-                  asdasdasdasdsdfghjkjhgfdfghj jhgfdfg hjkkjhgfds ertyuu hgvb
-                  nhgfertyujnb vfesdfgui jnbv<br></br>asdasd asdas da asd Ad as
-                  dasd asdasdsfghrte sedfbvcnj sdg ssdfoh uyvsabhcajsh
+                <div className="text-xl">
+                  Studying at Amrita vishwa vishydapeetam, coimbatore. Exploring the fields of web development and data science.
+                  <span className="block mt-3">Currently a full stack developper, creating innovative solutions for real-world problems. With an unwavering commitment to learning, I eagerly embrace new challenges, ready to dive headfirst into the ever-evolving landscape of technology.</span>
                 </div>
               </div>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 w-[85%] mx-auto">
                 <div className="flex flex-row hover:scale-[1.03] transition duration-100">
                   <div className="h-12 w-12 rounded-l-md bg-secondary-dark dark:bg-secondary-light">
                     <IoIosDocument className="h-8 w-8 mx-auto mt-2" />
                   </div>
                   <div
                     className={
-                      "relative h-12 w-full bg-secondary-light rounded-r-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#2a2a2c] before:inset-0 before:bg-[#2a2a2c] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-left before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100"
+                      "relative h-12 w-full bg-secondary-light rounded-r-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#0f1c10] before:inset-0 before:bg-[#0f1c10] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-left before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100 cursor-buttons"
                     }
                   >
                     Curiculum Vitae
@@ -69,7 +66,7 @@ export default function Home() {
                 <div className="flex flex-row hover:scale-[1.03] transition duration-100">
                   <div
                     className={
-                      "relative h-12 w-full bg-secondary-light rounded-l-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#2a2a2c] before:inset-0 before:bg-[#2a2a2c] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100"
+                      "relative h-12 w-full bg-secondary-light rounded-l-md transition duration-100 text-primary-dark hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:border-8 before:border-[#0f1c10] before:inset-0 before:bg-[#0f1c10] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn hover:before:z-0 hover:before:scale-x-100 cursor-buttons"
                     }
                   >
                     Projects

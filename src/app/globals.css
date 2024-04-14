@@ -12,10 +12,7 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 15px;
-  height: 15px;
   border-radius: 50%;
-  background-color: #FFF;
   pointer-events: none;
   z-index: 999;
   mix-blend-mode: difference;

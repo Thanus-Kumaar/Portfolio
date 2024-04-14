@@ -17,14 +17,14 @@ export default function footer() {
           <a
             href="https://github.com/Thanus-Kumaar"
             target="_blank"
-            className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1] cursor-buttons"
+            className="h-12 w-12 cursor-none bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1] cursor-buttons"
           >
               <FaGithub className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
           </a>
-          <a href="https://www.linkedin.com/in/thanus-kumaar/" target="_blank" className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1] cursor-buttons">
+          <a href="https://www.linkedin.com/in/thanus-kumaar/" target="_blank" className="h-12 w-12 cursor-none bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1] cursor-buttons">
             <FaLinkedinIn className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
           </a>
-          <a href="https://www.instagram.com/thanus_kumaar/" target="_blank" className="h-12 w-12 bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1] cursor-buttons">
+          <a href="https://www.instagram.com/thanus_kumaar/" target="_blank" className="h-12 w-12 cursor-none bg-secondary-dark dark:bg-secondary-light group transition duration-200 rounded-md hover:scale-[1.1] cursor-buttons">
             <RiInstagramFill className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
           </a>
         </div>

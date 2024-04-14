@@ -3,7 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import "../../../public/noScrollbar.css";
 import Footer from "../components/footer";
-import Cursor from '../components/cursor';
+import Cursor from "../components/cursor";
 
 import { Carousel } from "@material-tailwind/react";
 import { IconButton } from "@material-tailwind/react";
@@ -246,7 +246,7 @@ export default function Skills() {
               {new Array(length).fill("").map((_, i) => (
                 <span
                   key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                  className={`block h-1  rounded-2xl transition-all content-[''] ${
                     activeIndex === i
                       ? "w-8 dark:bg-primary-dark bg-white"
                       : "w-4 bg-white/50 dark:bg-primary-dark/50"
