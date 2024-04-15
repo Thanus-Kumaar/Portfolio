@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^5.0.13",
+    "@gsap/react": "^2.1.0",
     "@material-tailwind/react": "^2.1.9",
     "gsap": "^3.12.5",
     "next": "14.1.4",

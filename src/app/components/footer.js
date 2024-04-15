@@ -28,7 +28,7 @@ export default function footer() {
             <RiInstagramFill className="h-8 w-8 mx-auto mt-2 transition duration-100 group-hover:scale-[1.05]" />
           </a>
         </div>
-        <div className="text-secondary-light dark:text-primary-dark text-5xl mt-7">
+        <div className="text-secondary-light dark:text-primary-dark font-bold text-5xl mt-7">
           A curious mind
         </div>
       </div>

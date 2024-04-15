@@ -7,6 +7,7 @@ export default function Cursor(){
     const Ccursor = document.getElementById('custom-cursor');
     const CcursorO = document.getElementById('custom-cursor-overlay');
     const buttons = document.querySelectorAll('.cursor-buttons');
+    const certs = document.querySelectorAll('.certies');
 
     const onMouseEnter = ()=>{
       gsap.to(Ccursor,{scale:3, duration:0.1})
@@ -17,27 +18,33 @@ export default function Cursor(){
       gsap.to(Ccursor,{scale:1, duration:0.1})
       gsap.to(CcursorO,{scale:1, duration:0.1})
     }
-    // Event listener for mouse movement
+
+    const onMouseEnterCert = ()=>{
+      gsap.to(CcursorO,{scale:0, duration:0.2})
+    }
+
+    const onMouseLeaveCert = ()=>{
+      gsap.to(CcursorO,{scale:1, duration:0.2})
+    }
+
     const handleMouseMove = (e) => {
       gsap.to(Ccursor,{x: e.clientX, y:e.clientY, duration:0.2})
       gsap.to(CcursorO,{x: e.clientX, y:e.clientY, duration:0.4})
     };
-    // Event listener for mouse click
-    const handleMouseDown = () => {
-      setClicked(true);
-      // Reset click state after 800 milliseconds
-      setTimeout(() => {
-        setClicked(false);
-      }, 800);
-    };
+
 
     buttons.forEach((button)=>{
       button.addEventListener('mouseenter',onMouseEnter)
       button.addEventListener('mouseleave',onMouseLeave)
     })
 
+    certs.forEach((c)=>{
+      c.addEventListener('mouseenter',onMouseEnterCert)
+      c.addEventListener('mouseleave',onMouseLeaveCert)
+    })
+
     window.addEventListener("mousemove", handleMouseMove);
-    // Cleanup event listeners on component unmount
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };

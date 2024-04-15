@@ -76,7 +76,8 @@ export default function Home() {
                     Curiculum Vitae
                   </div>
                 </div>
-                <div className="flex flex-row hover:scale-[1.03] active:scale-[0.98] group transition duration-100">
+                <div className="flex flex-row hover:scale-[1.03] active:scale-[0.98] group transition duration-100"
+                onClick={()=>window.location.href = '/projects'}>
                   <div
                     className={
                       "relative h-12 w-full bg-secondary-light rounded-l-md transition duration-100 text-primary-dark group-hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:absolute before:rounded-l-md before:border-8 before:border-[#0f1c10] before:inset-0 before:bg-[#0f1c10] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn group-hover:before:z-0 group-hover:before:scale-x-100 cursor-buttons"

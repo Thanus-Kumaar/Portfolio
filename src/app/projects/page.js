@@ -27,7 +27,7 @@ export default function Projects() {
     {
       Title: "Quick Attendance",
       Desc: "The Quick Attendance Application modernizes student attendance management at Amrita Vishwa Vidyapeetham. Utilizing Flutter technology, this application combines precision, efficiency, and user-friendliness in attendance tracking.",
-      Img: "/AI-Study-Mate.png",
+      Img: "/Quick-Attendance.jpeg",
       url: "https://github.com/suman1406/quick_attendance_server_code",
       Tags: ["express", "node"],
     },
