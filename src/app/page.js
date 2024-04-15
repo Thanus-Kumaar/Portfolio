@@ -11,24 +11,9 @@ import Cursor from "./components/cursor";
 import "../../public/noScrollbar.css";
 
 export default function Home() {
-  const cursor = useRef(null);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  const handleCursor = (event) => {
-    const { pageX, pageY } = event;
-    console.log(pageX);
-    setPosition({ x: pageX, y: pageY });
-  };
-
   return (
     <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-LouisG h-screen flex flex-col">
       <Cursor />
-      {/* <div
-        className="absolute"
-        ref={cursor}
-      >
-        <div className="relative w-2 h-2 bg-primary-light rounded-full after:bg-primary-light after:opacity-60 after:w-4 after:h-4 after:content-[''] after:absolute after:rounded-full after:translate-x-[-25%] after:translate-y-[-25%]"></div>
-      </div> */}
       <Navbar />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="flex flex-row justify-center px-[80px] py-[50px] h-full">
