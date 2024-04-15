@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Cursor from "../components/cursor";
-import "../../../public/noScrollBar.css";
+import '../../../public/noScrollbar.css';
 import { FaSquareArrowUpRight } from "react-icons/fa6";
 
 export default function Projects() {
