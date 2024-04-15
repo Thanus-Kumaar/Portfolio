@@ -41,7 +41,10 @@ export default function NavBar() {
 
   return (
     <div className="h-20 flex flex-row px-6 py-3 justify-between">
-      <div className="cursor-buttons" onClick={()=>window.location.href='/'}>
+      <div
+        className="cursor-buttons"
+        onClick={() => (window.location.href = "/")}
+      >
         <div className="text-3xl font-medium">Thanus Kumaar</div>
         <div className="pl-1 mb-3 text-md">A curious mind</div>
       </div>
@@ -73,7 +76,10 @@ export default function NavBar() {
           buttonBody={"Feats"}
           onClick={() => (window.location.href = "/certificates")}
         />
-        <Button buttonBody={"About"} onClick={redirectProjects} />
+        <Button
+          buttonBody={"About"}
+          onClick={() => (window.location.href = "/about")}
+        />
       </div>
     </div>
   );
