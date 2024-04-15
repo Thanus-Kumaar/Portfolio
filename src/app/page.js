@@ -43,7 +43,7 @@ export default function Home() {
                     <br></br>
                     <br></br>Studying at Amrita Vishwa Vidyapeetham, Coimbatore.
                     Full stack developer in web development and data science.
-                    Committed to learning, embracing challenges in technology's
+                    Committed to learning, embracing challenges in technology&#39;s
                     evolution.
                   </span>
                 </div>

@@ -60,8 +60,8 @@ export default function About() {
                 <div className="text-4xl font-bold">OTHER INTREST</div>
                 <div className="mt-8 flex-1 flex flex-row flex-wrap gap-8 gap-y-8 justify-center">
                   {others.map((item, index) => (
-                    <div className="h-[120px] w-[220px] flex flex-col gap-2 bg-secondary-dark dark:bg-secondary-light rounded-lg">
-                      <div key={index} className="flex flex-row h-[50px] w-full px-2 text-left justify-center">
+                    <div key={index} className="h-[120px] w-[220px] flex flex-col gap-2 bg-secondary-dark dark:bg-secondary-light rounded-lg">
+                      <div className="flex flex-row h-[50px] w-full px-2 text-left justify-center">
                         <div className="w-[30px]">
                           {item.icon}
                         </div>

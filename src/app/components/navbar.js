@@ -7,31 +7,32 @@ import { CiLight } from "react-icons/ci";
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
-  const redirectProjects = () => {
-    console.log("Projects clicked");
-  };
-
   const [theme, setTheme] = useState(() => {
     // Check localStorage for theme preference
-    const storedTheme = localStorage.getItem("theme");
-    // Check for dark mode preference or system preference
-    return storedTheme === "dark" ||
-      (!storedTheme &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ? "dark"
-      : "light";
+    if (typeof window !== "undefined") {
+      const storedTheme = localStorage.getItem("theme");
+      // Check for dark mode preference or system preference
+      return storedTheme === "dark" ||
+        (!storedTheme &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ? "dark"
+        : "light";
+    }
+    // Default to light theme if localStorage is not available
+    return "light";
   });
 
   // Effect to update the class on the root element based on theme
   useEffect(() => {
-    console.log(theme);
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    if (typeof window !== "undefined") {
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      // Update localStorage when theme changes
+      localStorage.setItem("theme", theme);
     }
-    // Update localStorage when theme changes
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   // Function to toggle theme between light and dark
