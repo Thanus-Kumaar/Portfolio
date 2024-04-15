@@ -21,7 +21,7 @@ export default function Projects() {
       Title: "Portfolio Website",
       Desc: "Discover my portfolio website, meticulously crafted to showcase my expertise and passion for technology. Explore with admiration, as my skills come to life on every page.",
       Img: "/Portfolio.png",
-      url: "https://github.com/Thanus-Kumaar/AI-Study-Mate",
+      url: "https://github.com/Thanus-Kumaar/Portfolio",
       Tags: ["next js", "tailwind"],
     },
     {
