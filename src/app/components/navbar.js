@@ -6,6 +6,7 @@ import { Drawer } from "@material-tailwind/react";
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
 import { FaBars } from "react-icons/fa6";
+import { IoCloseCircle } from "react-icons/io5";
 
 import { useEffect, useState } from "react";
 
@@ -54,7 +55,7 @@ export default function NavBar() {
         onClick={() => (window.location.href = "/")}
       >
         <div className="text-xl lg:text-3xl font-medium">Thanus Kumaar</div>
-        <div className="pl-1 mb-3 text-xs lg:text-md">A curious mind</div>
+        <div className="pl-1 mb-3 text-xs lg:text-sm">A curious mind</div>
       </div>
       <div className="flex flex-row gap-4 lg:pt-2">
         <div className="pt-2 flex flex-row gap-3 scale-75 lg:scale-100">
@@ -92,8 +93,50 @@ export default function NavBar() {
           <FaBars className="w-8 h-6" />
         </button>
       </div>
-      <Drawer open={open} onClose={closeDrawer}>
-        <div>Hello</div>
+      <Drawer
+        open={open}
+        onClose={closeDrawer}
+        placement="right"
+        className="bg-primary-dark dark:bg-primary-light p-4"
+      >
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-row justify-between">
+            <div className="text-2xl">My Portfolio</div>
+            <button className="active:opacity-60" onClick={closeDrawer}>
+              <IoCloseCircle className="w-8 h-8 mr-2" />
+            </button>
+          </div>
+          <div
+            onClick={() => (window.location.href = "/")}
+            className="text-center text-xl mx-1 py-1 rounded-xl bg-secondary-dark dark:bg-secondary-light active:opacity-60"
+          >
+            Home
+          </div>
+          <div
+            onClick={() => (window.location.href = "/projects")}
+            className="text-center text-xl mx-1 py-1 rounded-xl bg-secondary-dark dark:bg-secondary-light active:opacity-60"
+          >
+            Projects
+          </div>
+          <div
+            onClick={() => (window.location.href = "/skills")}
+            className="text-center text-xl mx-1 py-1 rounded-xl bg-secondary-dark dark:bg-secondary-light active:opacity-60"
+          >
+            Skills
+          </div>
+          <div
+            onClick={() => (window.location.href = "/certificates")}
+            className="text-center text-xl mx-1 py-1 rounded-xl bg-secondary-dark dark:bg-secondary-light active:opacity-60"
+          >
+            Feats
+          </div>
+          <div
+            onClick={() => (window.location.href = "/about")}
+            className="text-center text-xl mx-1 py-1 rounded-xl bg-secondary-dark dark:bg-secondary-light active:opacity-60"
+          >
+            About
+          </div>
+        </div>
       </Drawer>
     </div>
   );
