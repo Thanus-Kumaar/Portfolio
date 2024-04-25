@@ -51,7 +51,7 @@ export default function Cursor(){
   }, []);
 
   return(
-    <div>
+    <div className="hidden lg:block">
       <div id="custom-cursor" className="h-[10px] w-[10px] bg-[#b1ff76]  dark:bg-[#ccffc0] custom-cursor"
       ></div>
       <div id="custom-cursor-overlay" className="h-[30px] w-[30px] border-2 border-[#b1ff76] dark:border-[#ccffc0] custom-cursor"

@@ -1,12 +1,19 @@
 "use client";
 import Button from "./button";
 import { Switch } from "@material-tailwind/react";
+import { Drawer } from "@material-tailwind/react";
+
 import { CiDark } from "react-icons/ci";
 import { CiLight } from "react-icons/ci";
+import { FaBars } from "react-icons/fa6";
 
 import { useEffect, useState } from "react";
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false);
+  const openDrawer = () => setOpen(true);
+  const closeDrawer = () => setOpen(false);
+
   const [theme, setTheme] = useState(() => {
     // Check localStorage for theme preference
     if (typeof window !== "undefined") {
@@ -41,16 +48,16 @@ export default function NavBar() {
   };
 
   return (
-    <div className="h-20 flex flex-row px-6 py-3 justify-between">
+    <div className="h-16 lg:h-20 flex flex-row px-6 py-3 justify-between">
       <div
         className="cursor-buttons"
         onClick={() => (window.location.href = "/")}
       >
-        <div className="text-3xl font-medium">Thanus Kumaar</div>
-        <div className="pl-1 mb-3 text-md">A curious mind</div>
+        <div className="text-xl lg:text-3xl font-medium">Thanus Kumaar</div>
+        <div className="pl-1 mb-3 text-xs lg:text-md">A curious mind</div>
       </div>
-      <div className="flex flex-row gap-4 pt-2">
-        <div className="pt-2 flex flex-row gap-3">
+      <div className="flex flex-row gap-4 lg:pt-2">
+        <div className="pt-2 flex flex-row gap-3 scale-75 lg:scale-100">
           <CiDark className="w-7 h-7 transition duration-200 hover:scale-[1.15]" />
           <div className="mt-1">
             <Switch
@@ -81,7 +88,13 @@ export default function NavBar() {
           buttonBody={"About"}
           onClick={() => (window.location.href = "/about")}
         />
+        <button className="lg:hidden cursor-buttons" onClick={openDrawer}>
+          <FaBars className="w-8 h-6" />
+        </button>
       </div>
+      <Drawer open={open} onClose={closeDrawer}>
+        <div>Hello</div>
+      </Drawer>
     </div>
   );
 }
