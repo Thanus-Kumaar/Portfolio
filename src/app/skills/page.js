@@ -258,18 +258,23 @@ export default function Skills() {
           )}
         >
           {skillSet.map((skill, index) => (
-            <div key={index} className="flex h-full flex-row text-center p-4">
-              <div className="flex-1 flex h-full flex-col justify-center gap-10 px-28">
+            <div
+              key={index}
+              className="flex h-full flex-col lg:flex-row text-center mt-20 lg:mt-0 p-4"
+            >
+              <div className="lg:flex-1 flex lg:h-full flex-col justify-center gap-10 lg:px-28">
                 <div className="flex flex-col gap-12">
-                  <div className="text-6xl font-semibold">{skill.Title}</div>
+                  <div className="text-4xl lg:text-6xl font-semibold">
+                    {skill.Title}
+                  </div>
                   <div className="text-xl">{skill.Desc}</div>
                 </div>
               </div>
-              <div className="w-[40%] h-fit mb-20 mt-10 grid grid-cols-4 gap-16 mr-10">
+              <div className="lg:w-[40%] lg:h-fit mx-auto mb-20 mt-20 lg:mt-10 lg:mr-10 grid grid-cols-4 gap-8 lg:gap-16">
                 {skill.Icons.map((i, index) => (
                   <div
                     key={index}
-                    className="h-20 w-20 dark:bg-primary-light bg-primary-dark rounded-xl transition duration-200 hover:scale-[1.05]"
+                    className="h-10 w-10 lg:h-20 lg:w-20 dark:bg-primary-light bg-primary-dark rounded-xl transition duration-200 hover:scale-[1.05]"
                   >
                     {i.icon}
                   </div>
