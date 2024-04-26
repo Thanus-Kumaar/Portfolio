@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Cursor from "../components/cursor";
-import '../../../public/noScrollbar.css';
+import "../../../public/noScrollbar.css";
 import { FaSquareArrowUpRight } from "react-icons/fa6";
 
 export default function Projects() {
@@ -66,14 +66,14 @@ export default function Projects() {
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-        <div className="text-[30px] ml-10 mt-4 mx-auto font-bold text-center">
+        <div className="text-[30px] lg:ml-10 mt-4 mx-auto font-bold text-center">
           PROJECTS
         </div>
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="w-[700px] h-[500px] rounded-xl p-4 bg-primary-dark dark:bg-primary-light transition duration-200 hover:scale-[1.01]"
+              className="w-[700px] h-fit lg:min-h-[500px] rounded-xl p-4 bg-primary-dark dark:bg-primary-light transition duration-200 hover:scale-[1.01]"
             >
               <Image
                 className="rounded-lg bg-white"
@@ -82,7 +82,7 @@ export default function Projects() {
                 height={370}
                 width={680}
               />
-              <div className="flex flex-row justify-between mt-2">
+              <div className="flex flex-col lg:flex-row justify-between mt-2">
                 <div className="text-2xl mt-3 font-semibold">
                   {project.Title}
                 </div>
@@ -97,12 +97,12 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              <div className="flex flex-row">
+              <div className="flex flex-col lg:flex-row">
                 <div className="flex-1 mt-3">{project.Desc}</div>
                 <a
                   href={project.url}
                   target="_blank"
-                  className="cursor-none cursor-buttons"
+                  className="ml-auto mt-2 lg:m-0 cursor-none cursor-buttons"
                 >
                   <FaSquareArrowUpRight className="h-10 w-10 mx-2 mt-2 transition duration-100 hover: hover:scale-[1.2]" />
                 </a>

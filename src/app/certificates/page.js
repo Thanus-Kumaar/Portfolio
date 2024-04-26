@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 
 import Navbar from "../components/navbar";
@@ -7,7 +7,6 @@ import Cursor from "../components/cursor";
 import "../../../public/noScrollbar.css";
 
 export default function Certifications() {
-
   const cert = [
     {
       title: "IITM BS Degree Foundation Certificate",
@@ -40,17 +39,30 @@ export default function Certifications() {
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-        <div className="w-full h-full overflow-scroll noScrollBar" id="Cert-Scroll">
-        <div className="text-[30px] mt-2 lg:mt-0 lg:ml-10 mx-auto font-bold text-center">
-          CERTIFICATIONS
-        </div>
-        <div className="block lg:hidden text-xs text-center">Click to view detail</div>
+        <div
+          className="w-full h-full overflow-scroll noScrollBar"
+          id="Cert-Scroll"
+        >
+          <div className="text-[30px] mt-2 lg:mt-0 lg:ml-10 mx-auto font-bold text-center">
+            CERTIFICATIONS
+          </div>
+          <div className="block lg:hidden text-xs text-center">
+            Click to view detail
+          </div>
           <div className="w-full px-8 py-4 flex flex-wrap flex-row justify-evenly gap-8 text-center">
-            {cert.map((c,index)=>(
-              <div key={index} className="w-[400px] group overflow-hidden h-[220px] lg:h-[250px] rounded-xl text-center bg-primary-dark dark:bg-primary-light certies">
+            {cert.map((c, index) => (
+              <div
+                key={index}
+                className="w-[400px] group overflow-hidden h-[220px] lg:h-[250px] rounded-xl text-center bg-primary-dark dark:bg-primary-light certies"
+              >
                 <div className="w-[95%] mx-auto mt-[10px] mb-[10px] h-[450px] lg:h-[480px] flex flex-col justify-between gap-4 transition duration-1000 hover:-translate-y-[54%]">
                   <div className="relative w-full h-[200px] lg:h-[230px]">
-                    <Image sizes="" fill className="rounded-lg border-2 border-secondary-light dark:border-primary-dark" src={c.img}/>
+                    <Image
+                      sizes=""
+                      fill
+                      className="rounded-lg border-2 border-secondary-light dark:border-primary-dark"
+                      src={c.img}
+                    />
                   </div>
                   <div className="w-full h-[230px] flex flex-col justify-center gap-4">
                     <span className="text-2xl font-bold">{c.title}</span>
@@ -61,8 +73,8 @@ export default function Certifications() {
             ))}
           </div>
           <div className="block lg:hidden">
-          <Footer />
-        </div>
+            <Footer />
+          </div>
         </div>
         <div className="hidden lg:block">
           <Footer />
