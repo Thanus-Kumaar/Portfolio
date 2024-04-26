@@ -53,19 +53,19 @@ export default function About() {
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-        <div className="w-full h-full p-20 flex flex-row gap-20 justify-center">
-          <div className="w-[800px] h-full rounded-xl text-black card3D">
+        <div className="w-full min-h-full lg:h-full p-4 lg:p-20 flex flex-col lg:flex-row gap-20 justify-center">
+          <div className="w-full lg:w-[800px] h-[700px] lg:h-full rounded-xl text-black card3D">
             <div className="card3DInner">
-              <div className="p-7 dark:bg-primary-light flex flex-col bg-primary-dark dark:text-primary-dark text-secondary-light cardFront">
+              <div className="p-3 lg:p-7 dark:bg-primary-light flex flex-col bg-primary-dark dark:text-primary-dark text-secondary-light cardFront">
                 <div className="text-4xl font-bold">OTHER INTREST</div>
-                <div className="mt-8 flex-1 flex flex-row flex-wrap gap-8 gap-y-8 justify-center">
+                <div className="mt-8 flex-1 flex flex-row flex-wrap gap-4 lg:gap-8 gap-y-8 justify-center">
                   {others.map((item, index) => (
-                    <div key={index} className="h-[120px] w-[220px] flex flex-col gap-2 bg-secondary-dark dark:bg-secondary-light rounded-lg">
-                      <div className="flex flex-row h-[50px] w-full px-2 text-left justify-center">
-                        <div className="w-[30px]">
+                    <div key={index} className="h-[160px] lg:h-[120px] w-[150px] lg:w-[220px] flex flex-col gap-2 bg-secondary-dark dark:bg-secondary-light rounded-lg">
+                      <div className="flex flex-row h-[40px] lg:h-[50px] w-full px-2 text-left justify-center">
+                        <div className="w-[15px] lg:w-[30px]">
                           {item.icon}
                         </div>
-                        <div className="text-2xl font-bold ml-3 w-fit mt-2">{item.name}</div>
+                        <div className="text-lg lg:text-2xl font-bold ml-3 w-fit mt-2">{item.name}</div>
                       </div>
                       <div className="px-2">
                         {item.desc}
@@ -74,7 +74,7 @@ export default function About() {
                   ))}
                 </div>
               </div>
-              <div className="p-7 dark:bg-primary-light bg-primary-dark dark:text-primary-dark text-secondary-light cardBack">
+              <div className="p-3 lg:p-7 dark:bg-primary-light bg-primary-dark dark:text-primary-dark text-secondary-light cardBack">
                 <div className="text-4xl font-bold">ABOUT</div>
                 <div className="mt-8 text-lg">
                   Currently pursuing a B.Tech in Computer Science at Amrita
@@ -91,10 +91,11 @@ export default function About() {
                   meaningful contributions to the ever-evolving world of
                   technology.
                 </div>
+                <div className="block text-lg mt-7 font-bold lg:hidden">Click to know more</div>
               </div>
             </div>
           </div>
-          <div>
+          <div className="hidden lg:block">
             <Image
               width={310}
               height={500}
