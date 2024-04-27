@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { IoIosDocument } from "react-icons/io";
 import { FaLightbulb } from "react-icons/fa";
+import { Alert } from "@material-tailwind/react";
 
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
@@ -11,10 +12,28 @@ import Cursor from "./components/cursor";
 import "../../public/noScrollbar.css";
 
 export default function Home() {
+  const [showAlert, setShowAlert] = useState(false);
+  const handleCV = () => {
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    },2000);
+  };
+
   return (
     <main className="bg-primary-dark dark:bg-primary-light text-secondary-light dark:text-primary-dark font-LouisG h-screen flex flex-col">
       <Cursor />
       <Navbar />
+      <Alert
+        variant="filled"
+        className={
+          showAlert == false
+            ? "hidden absolute z-[999] bottom-5 right-5 w-[200px] lg:w-[400px]"
+            : "absolute z-[999] bottom-5 right-5 w-[250px] lg:w-[400px]"
+        }
+      >
+        Currently Unavailable
+      </Alert>
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="flex flex-col lg:flex-row justify-center p-5 lg:px-[80px] lg:py-[50px] lg:h-full">
           <div className="h-full w-fit">
@@ -43,13 +62,13 @@ export default function Home() {
                     <br></br>
                     <br></br>Studying at Amrita Vishwa Vidyapeetham, Coimbatore.
                     Full stack developer in web development and data science.
-                    Committed to learning, embracing challenges in technology&#39;s
-                    evolution.
+                    Committed to learning, embracing challenges in
+                    technology&#39;s evolution.
                   </span>
                 </div>
               </div>
               <div className="flex flex-col gap-6 w-[97%] lg:w-[85%] mx-auto">
-                <div className="flex flex-row hover:scale-[1.03] active:scale-[0.98] group transition duration-100">
+                <div onClick={handleCV} className="flex flex-row hover:scale-[1.03] active:scale-[0.98] group transition duration-100">
                   <div className="h-12 w-12 rounded-l-md bg-secondary-dark dark:bg-secondary-light">
                     <IoIosDocument className="h-8 w-8 mx-auto mt-2" />
                   </div>
@@ -61,8 +80,10 @@ export default function Home() {
                     Curiculum Vitae
                   </div>
                 </div>
-                <div className="flex flex-row hover:scale-[1.03] active:scale-[0.98] group transition duration-100"
-                onClick={()=>window.location.href = '/projects'}>
+                <div
+                  className="flex flex-row hover:scale-[1.03] active:scale-[0.98] group transition duration-100"
+                  onClick={() => (window.location.href = "/projects")}
+                >
                   <div
                     className={
                       "relative h-12 w-full bg-secondary-light rounded-l-md transition duration-100 text-primary-dark lg:group-hover:text-white text-2xl text-center pt-[6px] before:content-[''] before:hidden lg:before:block before:absolute before:rounded-l-md before:border-8 before:border-[#0f1c10] before:inset-0 before:bg-[#0f1c10] before:z-[-1] before:scale-x-0 before:transition before:duration-300 before:origin-right before:mix-blend-color-burn group-hover:before:z-0 group-hover:before:scale-x-100 cursor-buttons"
