@@ -53,6 +53,27 @@ export default function Projects() {
       Tags: ["flask"],
     },
     {
+      Title: "Library Management System V2",
+      Desc: "Version 2 of the e-book management system for IIT Madras BS degree students now uses Vue.js, Flask, Redis, and Bootstrap. It offers faster access to e-books with a more responsive interface, enhancing the overall learning experience.",
+      Img: "/Library-Management-System-V2.png",
+      url: "https://github.com/Thanus-Kumaar/Library-Management-System-V2",
+      Tags: ["flask", "redis", "vue js", "bootstrap"],
+    },
+    {
+      Title: "Home network management system",
+      Desc: "A DSA project on implementing a hybrid data structure for managing home networks effectively by a single application. This uses tree as base data structure for rendering hierarchical structure.",
+      Img: "/Network-Manager.png",
+      url: "https://github.com/Abishek-45/IOT---Hybrid-Datastructures",
+      Tags: ["next js", "tailwind"],
+    },
+    {
+      Title: "Smart Todo Application",
+      Desc: "A project that uses modified heaps to help us complete our tasks effectively. Witness my brand new application developed using Rust and Tauri that can assist you in completing your tasks on time and keeps you ahead of others.",
+      Img: "/Tauri-App.png",
+      url: "https://github.com/Thanus-Kumaar/Smart-Todo-Application",
+      Tags: ["rust", "tauri", "react js", "tailwind"],
+    },
+    {
       Title: "Non-tax revenue analysis",
       Desc: "A DBMS project on rendering and analyzing data related to non tax revenue of India and other countries",
       Img: "/Non-Tax-Revenue.png",

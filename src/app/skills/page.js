@@ -39,6 +39,8 @@ import { TbBrandCpp } from "react-icons/tb";
 import { TbLetterC } from "react-icons/tb";
 import { FaDatabase } from "react-icons/fa6";
 import { BsRegex } from "react-icons/bs";
+import { FaRust } from "react-icons/fa";
+import { SiTauri } from "react-icons/si";
 
 export default function Skills() {
   const skillSet = [
@@ -184,6 +186,14 @@ export default function Skills() {
         {
           icon: <BsRegex className="skill-icon" />,
           iconDesc: "regular expression",
+        },
+        {
+          icon: <FaRust className="skill-icon" />,
+          iconDesc: "Rust",
+        },
+        {
+          icon: <SiTauri className="skill-icon" />,
+          iconDesc: "Tauri",
         },
       ],
     },

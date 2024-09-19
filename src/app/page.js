@@ -14,10 +14,7 @@ import "../../public/noScrollbar.css";
 export default function Home() {
   const [showAlert, setShowAlert] = useState(false);
   const handleCV = () => {
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    },2000);
+    window.open('/Resume.pdf', '_blank');
   };
 
   return (
