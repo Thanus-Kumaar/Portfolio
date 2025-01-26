@@ -18,6 +18,13 @@ export default function Projects() {
       Tags: ["next js", "tailwind"],
     },
     {
+      Title: "Mediclined",
+      Desc: "Mediclined is a comprehensive web application designed to streamline the relationship between college/university clinics and students through digital healthcare management.",
+      Img: "/Mediclined.png",
+      url: "https://github.com/Aakash-Balasundaram/Mediclined-Frontend",
+      Tags: ["next js", "tailwind", "MUI", "express", "mysql", "mongo", "esp32"],
+    },
+    {
       Title: "Portfolio Website",
       Desc: "Discover my portfolio website, meticulously crafted to showcase my expertise and passion for technology. Explore with admiration, as my skills come to life on every page.",
       Img: "/Portfolio.png",
@@ -29,14 +36,14 @@ export default function Projects() {
       Desc: "AI StudyMate is an innovative learning app designed to enhance your learning experience through intelligent AI assistance. Learn smart, learn simple with our user friendly platform that adapts to your pace.",
       Img: "/AI-Study-Mate.png",
       url: "https://github.com/Thanus-Kumaar/AI-Study-Mate",
-      Tags: ["vue", "express"],
+      Tags: ["vue", "express", "mysql"],
     },
     {
       Title: "FC Team Forge",
       Desc: "Welcome to FC-TeamForge, the ultimate solution for effortlessly creating balanced football teams from a pool of real-life players. No more debates, no more uneven teams – just smooth, hassle-free team formation!",
       Img: "/FC-Team-Forge.png",
       url: "https://github.com/Thanus-Kumaar/FC-TeamForge-server",
-      Tags: ["vue", "express"],
+      Tags: ["vue", "express", "mysql"],
     },
     {
       Title: "Quick Attendance",
