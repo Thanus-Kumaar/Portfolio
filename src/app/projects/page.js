@@ -11,6 +11,13 @@ import { FaSquareArrowUpRight } from "react-icons/fa6";
 export default function Projects() {
   const [projects, setProjects] = useState([
     {
+      Title: "Internship at LogicFlow AI",
+      Desc: "Built a web app that integrates AI tools into workflows, built with React and Django, featuring seamless APIs and interactive interfaces like chat bots and flow diagrams.",
+      Img: "/LogicFlo.png",
+      url: "https://logicflo.ai/",
+      Tags: ["react js", "tailwind", "reactflow", "django", "ai agents"],
+    },
+    {
       Title: "Anokha Website",
       Desc: "Experience the vibrant spirit of Anokha, the pinnacle of technology excitement, through our website. Dive into Amrita Vishwa Vidyapeetham's Coimbatore Campus extravaganza right from your screen!",
       Img: "/Anokha2.png",
@@ -21,7 +28,7 @@ export default function Projects() {
       Title: "Mediclined",
       Desc: "Mediclined is a comprehensive web application designed to streamline the relationship between college/university clinics and students through digital healthcare management.",
       Img: "/Mediclined.png",
-      url: "https://github.com/Aakash-Balasundaram/Mediclined-Frontend",
+      url: "https://github.com/orgs/Project-Mediclined/repositories",
       Tags: ["next js", "tailwind", "MUI", "express", "mysql", "mongo", "esp32"],
     },
     {
@@ -95,7 +102,7 @@ export default function Projects() {
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
         <div className="text-[30px] lg:ml-10 mt-4 mx-auto font-bold text-center">
-          PROJECTS
+          WORKS & PROJECTS
         </div>
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
           {projects.map((project, index) => (
