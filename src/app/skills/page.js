@@ -19,6 +19,7 @@ import { SiNextdotjs } from "react-icons/si";
 import { SiMysql } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { SiSqlite } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
 import { SiFlask } from "react-icons/si";
 import { FaBootstrap } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
@@ -28,6 +29,7 @@ import { SiVisualstudiocode } from "react-icons/si";
 import { SiVisualstudio } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
+import { SiBeekeeperstudio } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
@@ -39,6 +41,8 @@ import { TbBrandCpp } from "react-icons/tb";
 import { TbLetterC } from "react-icons/tb";
 import { FaDatabase } from "react-icons/fa6";
 import { BsRegex } from "react-icons/bs";
+import { SiGo } from "react-icons/si";
+import { SiHaskell } from "react-icons/si";
 import { FaRust } from "react-icons/fa";
 import { SiTauri } from "react-icons/si";
 
@@ -98,6 +102,10 @@ export default function Skills() {
           iconDesc: "Sqlite3",
         },
         {
+          icon: <SiMongodb className="skill-icon" />,
+          iconDesc: "Mongo DB",
+        },
+        {
           icon: <SiTailwindcss className="skill-icon" />,
           iconDesc: "HTML 5",
         },
@@ -122,19 +130,23 @@ export default function Skills() {
         },
         {
           icon: <FaFigma className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Figma",
         },
         {
           icon: <SiPostman className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Postman",
         },
+        // {
+        //   icon: <SiBeekeeperstudio className="skill-icon" />,
+        //   iconDesc: "Beekeeper studio",
+        // },
         {
           icon: <SiVisualstudiocode className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "VS code",
         },
         {
           icon: <SiVisualstudio className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Visual Studio",
         },
         {
           icon: <SiEclipseide className="skill-icon" />,
@@ -186,6 +198,14 @@ export default function Skills() {
         {
           icon: <BsRegex className="skill-icon" />,
           iconDesc: "regular expression",
+        },
+        {
+          icon: <SiGo className="skill-icon" />,
+          iconDesc: "Go lang",
+        },
+        {
+          icon: <SiHaskell className="skill-icon" />,
+          iconDesc: "Haskell",
         },
         {
           icon: <FaRust className="skill-icon" />,
