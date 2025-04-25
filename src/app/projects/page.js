@@ -200,19 +200,21 @@ export default function Projects() {
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-      <div className="group relative text-[30px] lg:ml-10 mt-5 mx-auto font-bold text-center w-fit">
-          WORKS
-          <span className="absolute left-0 -bottom-1 h-[3px] w-0 bg-primary-dark transition-all duration-500 group-hover:w-full"></span>
-          <span className="absolute right-0 -bottom-1 h-[3px] w-full bg-primary transition-all duration-500 group-hover:w-0"></span>
+      <div className="flex flex-row gap-2 items-center mt-10 w-fit mx-12">
+          <div className="text-[30px] font-bold text-center">WORKS</div>
+          <div className="mt-1 text-sm text-white bg-primary-dark px-2 py-[1px] mb-4 rounded-full">
+            {works.length}
+          </div>
         </div>
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
           {works.map((project, index) => Card(project))}
         </div>
         <hr className=" mx-auto my-8 border-t-4 border-primary-dark w-[95%]" />
-        <div className="group relative text-[30px] lg:ml-10 mt-10 mx-auto font-bold text-center w-fit">
-          PROJECTS
-          <span className="absolute left-0 -bottom-1 h-[3px] w-0 bg-primary-dark transition-all duration-500 group-hover:w-full"></span>
-          <span className="absolute right-0 -bottom-1 h-[3px] w-full bg-primary transition-all duration-500 group-hover:w-0"></span>
+        <div className="flex flex-row gap-2 items-center mt-10 w-fit mx-12">
+          <div className="text-[30px] font-bold text-center">PROJECTS</div>
+          <div className="mt-1 text-sm text-white bg-primary-dark px-2 py-[1px] mb-4 rounded-full">
+            {projects.length}
+          </div>
         </div>
 
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
