@@ -11,6 +11,27 @@ import { FaSquareArrowUpRight } from "react-icons/fa6";
 export default function Projects() {
   const [projects, setProjects] = useState([
     {
+      Title: "SustAIn",
+      Desc: "SustAIn is a chrome extension developed for GDG solutions challenge 2025, designed to make users aware of the carbon footprint and power efficiency involved in using AI-powered tools online.",
+      Img: "/SustAIn.png",
+      url: "https://github.com/SustAIn-GDG/SustAIn-Chrome-Extension",
+      Tags: ["chrome extension", "express js", "GCP", "vertex AI", "flask", "ML", "python"],
+    },
+    {
+      Title: "Pragati 2025",
+      Desc: "Pragati is an annual national-level B-Fest organized by Amrita School of Business, Coimbatore. Developed the backend for the website, which handled over 300+ student registrations and 20+ events accross 3 days.",
+      Img: "/Pragati-2025.png",
+      url: "https://github.com/Pragati-2025/Pragati_Backend_2025",
+      Tags: ["express js", "mysql", "CI/CD", "PayU", "mocha", "swagger docs", "bash"],
+    },
+    {
+      Title: "Amritotsavam 2025",
+      Desc: "Amritotsavam 2025 is a backend and admin web application developed to manage event registrations, schedules, and administrative workflows for Amrita’s annual cultural fest.",
+      Img: "/Amritotsavam-2025.png",
+      url: "https://logicflo.ai/",
+      Tags: ["express js", "mysql", "CI/CD", "PayU", "bash"],
+    },
+    {
       Title: "Internship at LogicFlow AI",
       Desc: "Built a web app that integrates AI tools into workflows, built with React and Django, featuring seamless APIs and interactive interfaces like chat bots and flow diagrams.",
       Img: "/LogicFlo.png",
