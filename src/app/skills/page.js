@@ -8,43 +8,47 @@ import Cursor from "../components/cursor";
 import { Carousel } from "@material-tailwind/react";
 import { IconButton } from "@material-tailwind/react";
 
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaReact,
+  FaCss3Alt,
+  FaVuejs,
+  FaBootstrap,
+  FaGitAlt,
+  FaGithub,
+  FaFigma,
+  FaPython,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaVuejs } from "react-icons/fa";
 import { IoLogoNodejs } from "react-icons/io5";
-import { SiExpress } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
-import { SiMysql } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { SiSqlite } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiFlask } from "react-icons/si";
-import { FaBootstrap } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { SiVisualstudiocode } from "react-icons/si";
-import { SiVisualstudio } from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
-import { SiPostman } from "react-icons/si";
-import { SiBeekeeperstudio } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
+import {
+  SiExpress,
+  SiScala,
+  SiNextdotjs,
+  SiSqlite,
+  SiMongodb,
+  SiFlask,
+  SiTailwindcss,
+  SiVisualstudiocode,
+  SiVisualstudio,
+  SiPostman,
+  SiBeekeeperstudio,
+  SiEclipseide,
+  SiBlender,
+  SiGnubash,
+  SiGo,
+  SiHaskell,
+  SiTauri,
+  SiMysql,
+  SiGooglecloud,
+  SiRender
+} from "react-icons/si";
+import { BiLogoPostgresql, BiLogoTypescript } from "react-icons/bi";
 import { RiJavascriptFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
-import { SiEclipseide } from "react-icons/si";
-import { SiBlender } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
-import { SiGnubash } from "react-icons/si";
-import { TbBrandCpp } from "react-icons/tb";
-import { TbLetterC } from "react-icons/tb";
-import { FaDatabase } from "react-icons/fa6";
+import { TbBrandCpp, TbLetterC } from "react-icons/tb";
+import { FaJava, FaDatabase } from "react-icons/fa6";
 import { BsRegex } from "react-icons/bs";
-import { SiGo } from "react-icons/si";
-import { SiHaskell } from "react-icons/si";
-import { FaRust } from "react-icons/fa";
-import { SiTauri } from "react-icons/si";
+import { FaRust, FaChrome } from "react-icons/fa";
 
 export default function Skills() {
   const skillSet = [
@@ -63,11 +67,11 @@ export default function Skills() {
         },
         {
           icon: <IoLogoJavascript className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Javascript",
         },
         {
           icon: <FaVuejs className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Vue JS",
         },
         {
           icon: <FaReact className="skill-icon" />,
@@ -75,7 +79,7 @@ export default function Skills() {
         },
         {
           icon: <SiNextdotjs className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Next JS",
         },
         {
           icon: <SiExpress className="skill-icon" />,
@@ -83,15 +87,15 @@ export default function Skills() {
         },
         {
           icon: <IoLogoNodejs className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Node JS",
         },
         {
           icon: <SiFlask className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Flask",
         },
         {
           icon: <SiMysql className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "MySQL",
         },
         {
           icon: <BiLogoPostgresql className="skill-icon" />,
@@ -107,11 +111,15 @@ export default function Skills() {
         },
         {
           icon: <SiTailwindcss className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Tailwind CSS",
         },
         {
           icon: <FaBootstrap className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Bootstrap",
+        },
+        {
+          icon: <FaChrome className="skill-icon" />,
+          iconDesc: "Chrome Extension",
         },
       ],
     },
@@ -122,11 +130,11 @@ export default function Skills() {
       Icons: [
         {
           icon: <FaGitAlt className="skill-icon" />,
-          iconDesc: "HTML 5",
+          iconDesc: "Git",
         },
         {
           icon: <FaGithub className="skill-icon" />,
-          iconDesc: "CSS 3",
+          iconDesc: "GitHub",
         },
         {
           icon: <FaFigma className="skill-icon" />,
@@ -155,6 +163,10 @@ export default function Skills() {
         {
           icon: <SiBlender className="skill-icon" />,
           iconDesc: "Blender",
+        },
+        {
+          icon: <SiGooglecloud className="skill-icon" />,
+          iconDesc: "Google Cloud",
         },
       ],
     },
@@ -214,6 +226,10 @@ export default function Skills() {
         {
           icon: <SiTauri className="skill-icon" />,
           iconDesc: "Tauri",
+        },
+        {
+          icon: <SiScala className="skill-icon" />,
+          iconDesc: "Scala",
         },
       ],
     },
@@ -303,6 +319,7 @@ export default function Skills() {
               <div className="lg:w-[40%] lg:h-fit mx-auto mb-20 mt-20 lg:mt-10 lg:mr-10 grid grid-cols-4 gap-8 lg:gap-16">
                 {skill.Icons.map((i, index) => (
                   <div
+                    title={i.iconDesc}
                     key={index}
                     className="h-10 w-10 lg:h-20 lg:w-20 dark:bg-primary-light bg-primary-dark rounded-xl transition duration-200 hover:scale-[1.05]"
                   >
