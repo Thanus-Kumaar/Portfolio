@@ -8,21 +8,67 @@ import Cursor from "../components/cursor";
 import "../../../public/noScrollbar.css";
 import { FaSquareArrowUpRight } from "react-icons/fa6";
 
+const Card = (project) => (
+  <div
+    key={project.index}
+    className="w-[700px] h-fit lg:min-h-[500px] rounded-xl p-4 bg-primary-dark dark:bg-primary-light transition duration-200 hover:scale-[1.01]"
+  >
+    <Image
+      className="rounded-lg bg-white"
+      src={project.Img}
+      alt="HELLO"
+      height={370}
+      width={680}
+    />
+    <div className="flex flex-col lg:flex-row justify-between mt-2">
+      <div className="text-2xl mt-3 font-semibold">{project.Title}</div>
+      <div className="flex flex-row mt-3 gap-3">
+        {project.Tags.map((tag, index) => (
+          <div
+            key={index}
+            className="rounded-md h-fit text-sm px-2 text-center bg-secondary-light text-primary-dark dark:bg-primary-dark dark:text-secondary-light"
+          >
+            {tag}
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="flex flex-col lg:flex-row">
+      <div className="flex-1 mt-3">{project.Desc}</div>
+      <a
+        href={project.url}
+        target="_blank"
+        className="ml-auto mt-2 lg:m-0 cursor-none cursor-buttons"
+      >
+        <FaSquareArrowUpRight className="h-10 w-10 mx-2 mt-2 transition duration-100 hover: hover:scale-[1.2]" />
+      </a>
+    </div>
+  </div>
+);
+
 export default function Projects() {
-  const [projects, setProjects] = useState([
+  const [works, setWorks] = useState([
     {
-      Title: "SustAIn",
-      Desc: "SustAIn is a chrome extension developed for GDG solutions challenge 2025, designed to make users aware of the carbon footprint and power efficiency involved in using AI-powered tools online.",
-      Img: "/SustAIn.png",
-      url: "https://github.com/SustAIn-GDG/SustAIn-Chrome-Extension",
-      Tags: ["chrome extension", "express js", "GCP", "vertex AI", "flask", "ML", "python"],
+      Title: "Internship at LogicFlow AI",
+      Desc: "Built a web app that integrates AI tools into workflows, built with React and Django, featuring seamless APIs and interactive interfaces like chat bots and flow diagrams.",
+      Img: "/LogicFlo.png",
+      url: "https://logicflo.ai/",
+      Tags: ["react js", "tailwind", "reactflow", "django", "ai agents"],
     },
     {
       Title: "Pragati 2025",
       Desc: "Pragati is an annual national-level B-Fest organized by Amrita School of Business, Coimbatore. Developed the backend for the website, which handled over 300+ student registrations and 20+ events accross 3 days.",
       Img: "/Pragati-2025.png",
       url: "https://github.com/Pragati-2025/Pragati_Backend_2025",
-      Tags: ["express js", "mysql", "CI/CD", "PayU", "mocha", "swagger docs", "bash"],
+      Tags: [
+        "express js",
+        "mysql",
+        "CI/CD",
+        "PayU",
+        "mocha",
+        "swagger docs",
+        "bash",
+      ],
     },
     {
       Title: "Amritotsavam 2025",
@@ -32,39 +78,28 @@ export default function Projects() {
       Tags: ["express js", "mysql", "CI/CD", "PayU", "bash"],
     },
     {
-      Title: "Internship at LogicFlow AI",
-      Desc: "Built a web app that integrates AI tools into workflows, built with React and Django, featuring seamless APIs and interactive interfaces like chat bots and flow diagrams.",
-      Img: "/LogicFlo.png",
-      url: "https://logicflo.ai/",
-      Tags: ["react js", "tailwind", "reactflow", "django", "ai agents"],
-    },
-    {
       Title: "Anokha Website",
       Desc: "Experience the vibrant spirit of Anokha, the pinnacle of technology excitement, through our website. Dive into Amrita Vishwa Vidyapeetham's Coimbatore Campus extravaganza right from your screen!",
       Img: "/Anokha2.png",
       url: "https://anokha.amrita.edu",
       Tags: ["next js", "tailwind"],
     },
+  ]);
+  const [projects, setProjects] = useState([
     {
-      Title: "News Aggregator",
-      Desc: "Experience the vibrant spirit of Anokha, the pinnacle of technology excitement, through our website. Dive into Amrita Vishwa Vidyapeetham's Coimbatore Campus extravaganza right from your screen!",
-      Img: "/NewsAgg.png",
-      url: "https://github.com/MugunthNarayanan13/News_Aggregator_Frontend",
-      Tags: ["react js", "tailwind", "typescript", "express js", "mongo"],
-    },
-    {
-      Title: "Raga Classifier - Machine Learning Model",
-      Desc: "An ML-powered web application that identifies Indian classical ragas from audio input using a hybrid CNN-LSTM model built with TensorFlow and deployed via Streamlit.",
-      Img: "/Raga-Classifier.png",
-      url: "https://github.com/ananthakrishna7/dl-raga-classifier",
-      Tags: ["python", "tensorflow", "streamlit"],
-    },
-    {
-      Title: "Mediclined",
-      Desc: "Mediclined is a comprehensive web application designed to streamline the relationship between college/university clinics and students through digital healthcare management.",
-      Img: "/Mediclined.png",
-      url: "https://github.com/orgs/Project-Mediclined/repositories",
-      Tags: ["next js", "tailwind", "MUI", "express", "mysql", "mongo", "esp32"],
+      Title: "SustAIn",
+      Desc: "SustAIn is a chrome extension developed for GDG solutions challenge 2025, designed to make users aware of the carbon footprint and power efficiency involved in using AI-powered tools online.",
+      Img: "/SustAIn.png",
+      url: "https://github.com/SustAIn-GDG/SustAIn-Chrome-Extension",
+      Tags: [
+        "chrome extension",
+        "express js",
+        "GCP",
+        "vertex AI",
+        "flask",
+        "ML",
+        "python",
+      ],
     },
     {
       Title: "Portfolio Website",
@@ -72,6 +107,28 @@ export default function Projects() {
       Img: "/Portfolio.png",
       url: "https://github.com/Thanus-Kumaar/Portfolio",
       Tags: ["next js", "tailwind"],
+    },
+    {
+      Title: "Mediclined",
+      Desc: "Mediclined is a comprehensive web application designed to streamline the relationship between college/university clinics and students through digital healthcare management.",
+      Img: "/Mediclined.png",
+      url: "https://github.com/orgs/Project-Mediclined/repositories",
+      Tags: [
+        "next js",
+        "tailwind",
+        "MUI",
+        "express",
+        "mysql",
+        "mongo",
+        "esp32",
+      ],
+    },
+    {
+      Title: "Raga Classifier - Machine Learning Model",
+      Desc: "An ML-powered web application that identifies Indian classical ragas from audio input using a hybrid CNN-LSTM model built with TensorFlow and deployed via Streamlit.",
+      Img: "/Raga-Classifier.png",
+      url: "https://github.com/ananthakrishna7/dl-raga-classifier",
+      Tags: ["python", "tensorflow", "streamlit"],
     },
     {
       Title: "AI Study Mate",
@@ -93,6 +150,13 @@ export default function Projects() {
       Img: "/Quick-Attendance.jpeg",
       url: "https://github.com/suman1406/quick_attendance_server_code",
       Tags: ["express", "node"],
+    },
+    {
+      Title: "News Aggregator",
+      Desc: "Experience the vibrant spirit of Anokha, the pinnacle of technology excitement, through our website. Dive into Amrita Vishwa Vidyapeetham's Coimbatore Campus extravaganza right from your screen!",
+      Img: "/NewsAgg.png",
+      url: "https://github.com/MugunthNarayanan13/News_Aggregator_Frontend",
+      Tags: ["react js", "tailwind", "typescript", "express js", "mongo"],
     },
     {
       Title: "Library Management System",
@@ -136,49 +200,23 @@ export default function Projects() {
       <Navbar />
       <Cursor />
       <div className="flex-1 w-[98%] rounded-lg mb-5 bg-secondary-dark dark:bg-secondary-light mx-auto align-middle overflow-scroll noScrollBar">
-        <div className="text-[30px] lg:ml-10 mt-4 mx-auto font-bold text-center">
-          WORKS & PROJECTS
+      <div className="group relative text-[30px] lg:ml-10 mt-5 mx-auto font-bold text-center w-fit">
+          WORKS
+          <span className="absolute left-0 -bottom-1 h-[3px] w-0 bg-primary-dark transition-all duration-500 group-hover:w-full"></span>
+          <span className="absolute right-0 -bottom-1 h-[3px] w-full bg-primary transition-all duration-500 group-hover:w-0"></span>
         </div>
         <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="w-[700px] h-fit lg:min-h-[500px] rounded-xl p-4 bg-primary-dark dark:bg-primary-light transition duration-200 hover:scale-[1.01]"
-            >
-              <Image
-                className="rounded-lg bg-white"
-                src={project.Img}
-                alt="HELLO"
-                height={370}
-                width={680}
-              />
-              <div className="flex flex-col lg:flex-row justify-between mt-2">
-                <div className="text-2xl mt-3 font-semibold">
-                  {project.Title}
-                </div>
-                <div className="flex flex-row mt-3 gap-3">
-                  {project.Tags.map((tag, index) => (
-                    <div
-                      key={index}
-                      className="rounded-md h-fit text-sm px-2 text-center bg-secondary-light text-primary-dark dark:bg-primary-dark dark:text-secondary-light"
-                    >
-                      {tag}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col lg:flex-row">
-                <div className="flex-1 mt-3">{project.Desc}</div>
-                <a
-                  href={project.url}
-                  target="_blank"
-                  className="ml-auto mt-2 lg:m-0 cursor-none cursor-buttons"
-                >
-                  <FaSquareArrowUpRight className="h-10 w-10 mx-2 mt-2 transition duration-100 hover: hover:scale-[1.2]" />
-                </a>
-              </div>
-            </div>
-          ))}
+          {works.map((project, index) => Card(project))}
+        </div>
+        <hr className=" mx-auto my-8 border-t-4 border-primary-dark w-[95%]" />
+        <div className="group relative text-[30px] lg:ml-10 mt-10 mx-auto font-bold text-center w-fit">
+          PROJECTS
+          <span className="absolute left-0 -bottom-1 h-[3px] w-0 bg-primary-dark transition-all duration-500 group-hover:w-full"></span>
+          <span className="absolute right-0 -bottom-1 h-[3px] w-full bg-primary transition-all duration-500 group-hover:w-0"></span>
+        </div>
+
+        <div className="mx-8 my-5 flex flex-wrap flex-row justify-between gap-y-10 gap-5">
+          {projects.map((project, index) => Card(project))}
         </div>
         <Footer />
       </div>
