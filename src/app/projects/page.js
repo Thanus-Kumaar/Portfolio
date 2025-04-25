@@ -46,6 +46,20 @@ export default function Projects() {
       Tags: ["next js", "tailwind"],
     },
     {
+      Title: "News Aggregator",
+      Desc: "Experience the vibrant spirit of Anokha, the pinnacle of technology excitement, through our website. Dive into Amrita Vishwa Vidyapeetham's Coimbatore Campus extravaganza right from your screen!",
+      Img: "/NewsAgg.png",
+      url: "https://github.com/MugunthNarayanan13/News_Aggregator_Frontend",
+      Tags: ["react js", "tailwind", "typescript", "express js", "mongo"],
+    },
+    {
+      Title: "Raga Classifier - Machine Learning Model",
+      Desc: "An ML-powered web application that identifies Indian classical ragas from audio input using a hybrid CNN-LSTM model built with TensorFlow and deployed via Streamlit.",
+      Img: "/Raga-Classifier.png",
+      url: "https://github.com/ananthakrishna7/dl-raga-classifier",
+      Tags: ["python", "tensorflow", "streamlit"],
+    },
+    {
       Title: "Mediclined",
       Desc: "Mediclined is a comprehensive web application designed to streamline the relationship between college/university clinics and students through digital healthcare management.",
       Img: "/Mediclined.png",
